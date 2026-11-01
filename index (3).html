@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politek IBC - Kursus Bahasa Inggris & Komputer Jatibarang, Indramayu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1A4FB0',
+                            darkblue: '#0E337A',
+                            lightblue: '#EEF4FF',
+                            red: '#E11D48',
+                            darkred: '#BE123C',
+                            lightred: '#FFF1F2',
+                            gold: '#E11D48', // mapped to red accent
+                            goldhover: '#BE123C',
+                            accent: '#1A4FB0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-pattern {
+            background-color: #1A4FB0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-red-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="erasebg-transformed (1).png" alt="Logo Politek IBC" class="w-12 h-12 object-contain group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-xl tracking-tight text-brand-blue leading-none">POLITEK <span class="text-brand-red">IBC</span></span>
+                        <span class="text-xs text-slate-500 font-medium mt-1">Est. 1985 • Jatibarang</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+                    <a href="#beranda" class="hover:text-brand-red transition-colors">Beranda</a>
+                    <a href="#tentang" class="hover:text-brand-red transition-colors">Tentang Kami</a>
+                    <a href="#english" class="hover:text-brand-red transition-colors">Bahasa Inggris</a>
+                    <a href="#komputer" class="hover:text-brand-red transition-colors">Komputer</a>
+                    <a href="#keunggulan" class="hover:text-brand-red transition-colors">Keunggulan</a>
+                </nav>
+
+                <!-- CTA Button Header -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#daftar" class="px-5 py-2.5 rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp mr-2 text-base"></i>Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-brand-red focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-lightred hover:text-brand-red">Beranda</a>
+            <a href="#tentang" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-lightred hover:text-brand-red">Tentang Kami</a>
+            <a href="#english" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-lightred hover:text-brand-red">Program Bahasa Inggris</a>
+            <a href="#komputer" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-lightred hover:text-brand-red">Program Komputer</a>
+            <a href="#keunggulan" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-lightred hover:text-brand-red">Keunggulan</a>
+            <a href="#daftar" class="mobile-link block w-full text-center px-4 py-3 rounded-xl bg-brand-red text-white font-bold text-sm shadow-md mt-4">
+                <i class="fa-brands fa-whatsapp mr-2"></i>Daftar Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative hero-pattern text-white py-20 lg:py-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Badge Info -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-semibold">
+                        <i class="fa-solid fa-certificate text-brand-red"></i>
+                        <span>Pengalaman Lebih dari 35 Tahun (Est. 1985)</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Solusi Tepat Belajar <span class="text-white underline decoration-brand-red decoration-4">Bahasa Inggris</span> & <span class="text-white underline decoration-brand-blue decoration-4">Komputer</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Lembaga pendidikan non-formal terpercaya dan pioneer di Jatibarang, Indramayu. Mencetak lulusan mahir, percaya diri, dan siap bersaing di dunia kerja maupun akademis dengan kelas interaktif eksklusif.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#daftar" class="px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold text-base transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 border-2 border-white/20">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            Daftar Sekarang
+                        </a>
+                        <a href="#english" class="px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-brand-blue font-bold text-base transition-all flex items-center justify-center gap-2 shadow-md">
+                            Lihat Program & Biaya
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Location Tag & Features Badge -->
+                    <div class="pt-6 border-t border-white/20 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-white">
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-red"></i>
+                            <span>Jatibarang, Indramayu</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-users text-white"></i>
+                            <span>Maks. 4 - 10 Siswa/Kelas</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-brand-red"></i>
+                            <span>Sejak Tahun 1985</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Card Illustration -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative background glow -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-red to-white blur-md opacity-40"></div>
+                        
+                        <div class="relative rounded-2xl bg-white p-6 sm:p-8 text-slate-800 shadow-2xl border-2 border-brand-red">
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <img src="erasebg-transformed (1).png" alt="Politek IBC Logo" class="w-10 h-10 object-contain">
+                                    <div>
+                                        <h3 class="font-bold text-lg text-brand-blue">Kenapa Pilih IBC?</h3>
+                                        <p class="text-xs text-slate-500">Pendidikan Berkualitas di Indramayu</p>
+                                    </div>
+                                </div>
+                                <span class="w-10 h-10 rounded-full bg-brand-lightred flex items-center justify-center text-brand-red font-bold text-sm">
+                                    <i class="fa-solid fa-award text-lg"></i>
+                                </span>
+                            </div>
+
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-brand-lightred text-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-slate-700"><strong>Kelas Small Group (Maks. 4 siswa)</strong> untuk perhatian penuh instruktur.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-brand-lightred text-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-slate-700"><strong>Pengajar Berpengalaman</strong> dan berdedikasi tinggi.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-brand-lightred text-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-slate-700"><strong>Biaya Kursus Terjangkau</strong> dengan pilihan jadwal fleksibel.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-brand-lightred text-brand-red flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <span class="text-sm font-medium text-slate-700"><strong>Kurikulum Praktis</strong> yang disesuaikan kebutuhan siswa & industri.</span>
+                                </li>
+                            </ul>
+
+                            <div class="mt-8 pt-4 border-t border-slate-100 text-center">
+                                <a href="#daftar" class="block w-full py-3 rounded-xl bg-brand-blue hover:bg-brand-darkblue text-white font-semibold text-sm transition-colors shadow">
+                                    Hubungi Admin Pendaftaran
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ABOUT US -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image/Graphic Mockup -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="w-full h-80 sm:h-96 rounded-3xl bg-slate-50 border-2 border-brand-red/20 overflow-hidden shadow-xl flex items-center justify-center relative p-8">
+                            <!-- Background Decor -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue/10 via-white to-brand-red/10"></div>
+                            
+                            <div class="text-center relative z-10 space-y-4">
+                                <img src="erasebg-transformed (1).png" alt="Politek IBC Logo" class="w-28 h-28 mx-auto object-contain drop-shadow-md">
+                                <h4 class="font-extrabold text-2xl text-brand-blue">POLITEK <span class="text-brand-red">IBC</span></h4>
+                                <p class="text-xs text-slate-500 max-w-xs mx-auto">International Brilliant College Jatibarang</p>
+                                <div class="inline-block px-4 py-1.5 rounded-full bg-brand-red text-white text-xs font-bold shadow">
+                                    Berdiri Sejak 1985
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Badge -->
+                        <div class="absolute -bottom-6 -right-4 sm:right-6 bg-white p-4 rounded-2xl shadow-xl border-2 border-brand-blue flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-lightblue text-brand-blue flex items-center justify-center text-xl font-bold">
+                                39+
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold">Tahun Pengalaman</p>
+                                <p class="text-sm font-bold text-slate-800">Mencetak Lulusan Terbaik</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-lightred text-brand-red text-xs font-bold uppercase tracking-wider">
+                        Tentang Politek IBC
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Pioneer Lembaga Kursus Bahasa & Teknologi di Jatibarang
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+                        Berdiri sejak tahun <strong>1985</strong>, <strong>Politek IBC</strong> telah berkomitmen selama lebih dari 35 tahun untuk menghadirkan pendidikan berkualitas tinggi di bidang <strong>Bahasa Inggris</strong> dan <strong>Komputer</strong>. Berlokasi strategis di <strong>Jatibarang, Indramayu</strong>, kami berfokus pada pengembangan keterampilan praktis yang dapat langsung diterapkan dalam dunia sekolah, kuliah, maupun kerja.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Kami percaya bahwa belajar efektif membutuhkan metode interaktif dan perhatian penuh. Oleh karena itu, kami menerapkan sistem pembelajaran <em>Small Class</em> (maksimal 4 hingga 10 siswa per kelas) agar setiap siswa mendapatkan bimbingan intensif sesuai ritme belajar masing-masing.
+                    </p>
+
+                    <!-- Key highlights -->
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-brand-lightblue border border-brand-blue/20">
+                            <div class="font-bold text-xl text-brand-blue mb-1">Maks 4-10 Siswa</div>
+                            <div class="text-xs text-slate-600">Kelas kecil agar penyampaian materi lebih personal & efektif.</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-lightred border border-brand-red/20">
+                            <div class="font-bold text-xl text-brand-red mb-1">Biaya Terjangkau</div>
+                            <div class="text-xs text-slate-600">Pilihan paket hemat mulai dari Rp 200rb / bulan.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ENGLISH PROGRAM -->
+    <section id="english" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lightred text-brand-red text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-language"></i> Program Bahasa Inggris
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Pilihan Paket Belajar Bahasa Inggris
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Tingkatkan kemampuan Speaking, Grammar, dan Vocabulary dengan suasana belajar interaktif dan menyenangkan.
+                </p>
+            </div>
+
+            <!-- Pricing Grid for English -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Package 1: Regular Class -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
+                    <div>
+                        <div class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold text-xs inline-block mb-4">
+                            Reguler Group
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Regular Class</h3>
+                        <p class="text-xs text-slate-500 mb-6">Cocok untuk siswa yang berkomitmen tinggi dan ingin belajar terstruktur dengan biaya lebih terjangkau</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-brand-blue">Rp 200rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-users text-brand-red w-6"></i>
+                                <span>Maksimal 10 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-red w-6"></i>
+                                <span>8x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-red w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Bahasa Inggris - Regular Class (8x - Rp 200rb)')" class="block w-full py-3 text-center rounded-xl bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-800 font-bold text-sm transition-colors">
+                            Pilih Paket
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: Small Class 4x -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
+                    <div>
+                        <div class="px-3 py-1 rounded-full bg-brand-lightblue text-brand-blue font-semibold text-xs inline-block mb-4">
+                            Intensif Ringan
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Small Class (4x)</h3>
+                        <p class="text-xs text-slate-500 mb-6">Fokus tinggi dengan jadwal pertemuan 1x seminggu.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-brand-blue">Rp 250rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-user-group text-brand-blue w-6"></i>
+                                <span>Maksimal 4 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-blue w-6"></i>
+                                <span>4x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-blue w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Bahasa Inggris - Small Class (4x - Rp 250rb)')" class="block w-full py-3 text-center rounded-xl bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-800 font-bold text-sm transition-colors">
+                            Pilih Paket
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3: Small Class 8x (POPULAR) -->
+                <div class="bg-white rounded-2xl border-2 border-brand-red p-6 flex flex-col justify-between shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-red text-white font-extrabold text-xs shadow">
+                        PALING POPULER
+                    </div>
+
+                    <div>
+                        <div class="px-3 py-1 rounded-full bg-brand-lightred text-brand-red font-semibold text-xs inline-block mb-4 mt-2">
+                            Rekomendasi
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Small Class (8x)</h3>
+                        <p class="text-xs text-slate-500 mb-6">Keseimbangan ideal antara intensitas & fleksibilitas.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-brand-blue">Rp 450rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-user-group text-brand-red w-6"></i>
+                                <span>Maksimal 4 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-red w-6"></i>
+                                <span>8x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-red w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Bahasa Inggris - Small Class (8x - Rp 450rb)')" class="block w-full py-3 text-center rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold text-sm shadow transition-colors">
+                            Pilih Paket ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 4: Small Class 12x -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
+                    <div>
+                        <div class="px-3 py-1 rounded-full bg-brand-lightblue text-brand-blue font-semibold text-xs inline-block mb-4">
+                            Intensif Maksimal
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Small Class (12x)</h3>
+                        <p class="text-xs text-slate-500 mb-6">Progres lebih cepat dengan 3x pertemuan seminggu.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-3xl font-extrabold text-brand-blue">Rp 650rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-user-group text-brand-blue w-6"></i>
+                                <span>Maksimal 4 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-blue w-6"></i>
+                                <span>12x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-blue w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Bahasa Inggris - Small Class (12x - Rp 650rb)')" class="block w-full py-3 text-center rounded-xl bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-800 font-bold text-sm transition-colors">
+                            Pilih Paket
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION COMPUTER PROGRAM -->
+    <section id="komputer" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-lightblue text-brand-blue text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-laptop-code"></i> Program Komputer
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Pilihan Paket Belajar Komputer
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Semua kelas komputer diselenggarakan dalam format <strong>Small Class (Maksimal 4 Siswa)</strong> untuk memastikan bimbingan praktek langsung secara intensif.
+                </p>
+            </div>
+
+            <!-- Pricing Grid for Computer -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Computer Package 1: 4x -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 flex flex-col justify-between hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-lightblue text-brand-blue flex items-center justify-center font-bold text-xl mb-6">
+                            01
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Small Class (4x)</h3>
+                        <p class="text-xs text-slate-500 mb-6">Paket dasar untuk pengenalan aplikasi perkantoran / desain.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-brand-blue">Rp 300rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-200 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-user-group text-brand-blue w-6"></i>
+                                <span>Maksimal 4 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-blue w-6"></i>
+                                <span>4x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-blue w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Komputer - Small Class (4x - Rp 300rb)')" class="block w-full py-3.5 text-center rounded-xl bg-brand-blue hover:bg-brand-darkblue text-white font-bold text-sm transition-colors shadow">
+                            Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Computer Package 2: 8x -->
+                <div class="bg-slate-50 rounded-2xl border-2 border-brand-red bg-white p-8 flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 relative">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-red text-white font-extrabold text-xs shadow">
+                        FAVORIT SISWA
+                    </div>
+
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-lightred text-brand-red flex items-center justify-center font-bold text-xl mb-6 mt-2">
+                            02
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Small Class (8x)</h3>
+                        <p class="text-xs text-slate-500 mb-6">Pilihan paling optimal untuk menguasai skill komputer.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-brand-blue">Rp 450rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-200 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-user-group text-brand-red w-6"></i>
+                                <span>Maksimal 4 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-red w-6"></i>
+                                <span>8x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-red w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Komputer - Small Class (8x - Rp 450rb)')" class="block w-full py-3.5 text-center rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold text-sm transition-colors shadow">
+                            Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Computer Package 3: 12x -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 flex flex-col justify-between hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-lightblue text-brand-blue flex items-center justify-center font-bold text-xl mb-6">
+                            03
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Small Class (12x)</h3>
+                        <p class="text-xs text-slate-500 mb-6">Latihan praktek mendalam untuk percepatan keahlian.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-extrabold text-brand-blue">Rp 650rb</span>
+                            <span class="text-slate-500 text-xs font-medium">/ bulan</span>
+                        </div>
+
+                        <div class="border-t border-slate-200 pt-6 space-y-3">
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-user-group text-brand-blue w-6"></i>
+                                <span>Maksimal 4 Siswa</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-calendar-days text-brand-blue w-6"></i>
+                                <span>12x Pertemuan / Bulan</span>
+                            </div>
+                            <div class="flex items-center text-xs font-semibold text-slate-700">
+                                <i class="fa-solid fa-clock text-brand-blue w-6"></i>
+                                <span>Durasi 1 Jam / Pertemuan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#daftar" onclick="selectProgram('Komputer - Small Class (12x - Rp 650rb)')" class="block w-full py-3.5 text-center rounded-xl bg-brand-blue hover:bg-brand-darkblue text-white font-bold text-sm transition-colors shadow">
+                            Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ADVANTAGES / KEUNGGULAN -->
+    <section id="keunggulan" class="py-20 bg-brand-darkblue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-red text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow">
+                    Keunggulan Kami
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">
+                    Mengapa Politek IBC Pilihan Terbaik di Indramayu?
+                </h2>
+                <p class="text-slate-200 text-base">
+                    Kami memadukan pengalaman puluhan tahun dengan pendekatan modern untuk hasil belajar optimal.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-red text-white flex items-center justify-center text-2xl mb-6 shadow">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Kelas Interaktif & Terfokus</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed">
+                        Kapasitas maksimal hanya 4 sampai 10 siswa per kelas. Pengajar dapat memantau perkembangan setiap murid secara mendetail.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-white text-brand-blue flex items-center justify-center text-2xl mb-6 shadow">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pengajar Berpengalaman</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed">
+                        Instruktur profesional yang kompeten, ramah, dan berpengalaman dalam membimbing dari tingkat dasar hingga mahir.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-red text-white flex items-center justify-center text-2xl mb-6 shadow">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Biaya Sangat Terjangkau</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed">
+                        Kualitas pendidikan tinggi dengan investasi biaya yang ramah kantong masyarakat Jatibarang dan sekitarnya.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-white/10 border border-white/20 hover:bg-white/20 transition-colors">
+                    <div class="w-14 h-14 rounded-2xl bg-white text-brand-blue flex items-center justify-center text-2xl mb-6 shadow">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lokasi Strategis</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed">
+                        Terletak di pusat Jatibarang, Indramayu, yang sangat mudah diakses dari berbagai wilayah sekitar.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION REGISTRATION FORM & CONTACT -->
+    <section id="daftar" class="py-20 bg-slate-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Left Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-lightred text-brand-red text-xs font-bold uppercase tracking-wider mb-3">
+                            Pendaftaran & Hubungi Kami
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-slate-900">
+                            Mulai Langkah Anda Bersama Politek IBC
+                        </h2>
+                        <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                            Isi formulir di sebelah kanan atau langsung hubungi kami via WhatsApp. Tim pendaftaran kami akan siap membantu Anda memberikan rekomendasi program terbaik.
+                        </p>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-lightblue text-brand-blue flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Alamat Kursus</h4>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    <strong>Politek IBC</strong><br>
+                                    Jl. Tentara Pelajar No. 3 Jatibarang<br>
+                                    (Utara Terowongan Kereta Api Jatibarang), Indramayu.
+                                </p>
+                                <a href="https://share.google/j3FLGykco6NQsADKT" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-2.5 px-3 py-1.5 rounded-lg bg-brand-blue text-white hover:bg-brand-darkblue text-xs font-bold transition-colors shadow">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                    Buka di Google Maps &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-lightred text-brand-red flex items-center justify-center flex-shrink-0">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">WhatsApp Fast Response</h4>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    Konsultasi & Informasi Pendaftaran
+                                </p>
+                                <a href="https://wa.me/6282130580748" target="_blank" class="inline-block mt-2 text-xs font-bold text-brand-red hover:underline">
+                                    +62 821-3058-0748 &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 border-t border-slate-100 pt-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-lightblue text-brand-blue flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Jam Operasional</h4>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    Setiap Hari: 07:00 - 20:00 WIB
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration Form Right Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Formulir Pendaftaran Online</h3>
+                        <p class="text-xs text-slate-500 mb-8">Pilih program dan kirim data Anda. Pesan otomatis akan terformat ke WhatsApp Admin.</p>
+
+                        <form id="registrationForm" onsubmit="sendToWhatsApp(event)" class="space-y-5">
+                            <div>
+                                <label for="fullName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Lengkap Siswa *</label>
+                                <input type="text" id="fullName" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 text-sm outline-none transition">
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="whatsappNum" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nomor WhatsApp *</label>
+                                    <input type="tel" id="whatsappNum" required placeholder="Contoh: 08123456789" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="address" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Alamat / Asal (Kecamatan)</label>
+                                    <input type="text" id="address" placeholder="Contoh: Jatibarang" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 text-sm outline-none transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="programSelect" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Pilihan Program Belajar *</label>
+                                <select id="programSelect" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 text-sm outline-none transition bg-white">
+                                    <option value="" disabled selected>-- Pilih Program Belajar --</option>
+                                    <optgroup label="Bahasa Inggris">
+                                        <option value="Bahasa Inggris - Regular Class (8x - Rp 200rb)">Bahasa Inggris: Regular Class (Maks 10 Siswa - 8x - Rp 200rb)</option>
+                                        <option value="Bahasa Inggris - Small Class (4x - Rp 250rb)">Bahasa Inggris: Small Class (Maks 4 Siswa - 4x - Rp 250rb)</option>
+                                        <option value="Bahasa Inggris - Small Class (8x - Rp 450rb)">Bahasa Inggris: Small Class (Maks 4 Siswa - 8x - Rp 450rb)</option>
+                                        <option value="Bahasa Inggris - Small Class (12x - Rp 650rb)">Bahasa Inggris: Small Class (Maks 4 Siswa - 12x - Rp 650rb)</option>
+                                    </optgroup>
+                                    <optgroup label="Komputer">
+                                        <option value="Komputer - Small Class (4x - Rp 300rb)">Komputer: Small Class (Maks 4 Siswa - 4x - Rp 300rb)</option>
+                                        <option value="Komputer - Small Class (8x - Rp 450rb)">Komputer: Small Class (Maks 4 Siswa - 8x - Rp 450rb)</option>
+                                        <option value="Komputer - Small Class (12x - Rp 650rb)">Komputer: Small Class (Maks 4 Siswa - 12x - Rp 650rb)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="notes" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Catatan Tambahan (Opsional)</label>
+                                <textarea id="notes" rows="3" placeholder="Contoh: Jadwal yang diinginkan (sore/pagi) atau pertanyaan..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 text-sm outline-none transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold text-base shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                Kirim Pendaftaran via WhatsApp
+                            </button>
+                            <p class="text-center text-xs text-slate-400">Pesan akan dikirim langsung ke nomor WhatsApp resmi Politek IBC.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-800 pb-8">
+                <!-- Footer Brand -->
+                <div class="flex items-center gap-3">
+                    <img src="erasebg-transformed (1).png" alt="Politek IBC Logo" class="w-12 h-12 object-contain">
+                    <div>
+                        <span class="font-bold text-lg tracking-tight">POLITEK <span class="text-brand-red">IBC</span></span>
+                        <p class="text-xs text-slate-400">International Brilliant College • Est. 1985</p>
+                    </div>
+                </div>
+
+                <!-- Footer Nav -->
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400 font-medium">
+                    <a href="#beranda" class="hover:text-white transition-colors">Beranda</a>
+                    <a href="#tentang" class="hover:text-white transition-colors">Tentang</a>
+                    <a href="#english" class="hover:text-white transition-colors">Bahasa Inggris</a>
+                    <a href="#komputer" class="hover:text-white transition-colors">Komputer</a>
+                    <a href="https://share.google/j3FLGykco6NQsADKT" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fa-solid fa-map-pin mr-1 text-brand-red"></i> Google Maps</a>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 1985 - 2026 Politek IBC Jatibarang, Indramayu. All Rights Reserved.</p>
+                <p>Jl. Tentara Pelajar No. 3 Jatibarang (Utara Terowongan Kereta Api Jatibarang)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTERACTION -->
+    <script>
+        // Toggle Mobile Navigation Drawer
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile drawer when clicking links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Auto select program in form when clicking 'Pilih Paket'
+        function selectProgram(programValue) {
+            const selectElement = document.getElementById('programSelect');
+            if (selectElement) {
+                selectElement.value = programValue;
+            }
+        }
+
+        // WhatsApp Direct Link Handler
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('whatsappNum').value.trim();
+            const address = document.getElementById('address').value.trim() || '-';
+            const program = document.getElementById('programSelect').value;
+            const notes = document.getElementById('notes').value.trim() || '-';
+
+            // Target Admin WhatsApp number
+            const adminWA = "6282130580748";
+
+            // Format message
+            const message = `Halo Admin Politek IBC Jatibarang,%0A%0ASaya ingin mendaftar/konsultasi program kursus.%0A%0A*Data Pendaftar:*%0A- *Nama:* ${encodeURIComponent(name)}%0A- *No. WA:* ${encodeURIComponent(phone)}%0A- *Alamat/Asal:* ${encodeURIComponent(address)}%0A- *Program Yang Dipilih:* ${encodeURIComponent(program)}%0A- *Catatan:* ${encodeURIComponent(notes)}%0A%0AMohon informasi mengenai ketersediaan jadwal dan prosedur pendaftaran selanjutnya. Terima kasih!`;
+
+            const waUrl = `https://wa.me/${adminWA}?text=${message}`;
+
+            // Open WhatsApp in new tab
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
